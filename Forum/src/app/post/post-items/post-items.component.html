@@ -1,0 +1,25 @@
+<div class="card d-flex flex-row mb-3">
+    <div class="d-flex flex-grow-1 min-width-zero card-content">
+        <div class="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+            <a class="list-item-heading mb-1 truncate w-30 w-xs-100" href="#editLayoutItem" data-toggle="modal" data-target="#editLayoutItem">
+                {{post.content}}
+            </a>
+           
+            <p class="mb-1 text-muted text-small date w-20 w-xs-100">{{post.createdDate | date: 'EEEE  d  MMMM , y'}}</p>
+            <p class="mb-1 text-muted text-small date w-20 w-xs-100">{{post.likesNumber }}</p>
+            
+        </div>
+      <div class="list-actions">
+          <a (click)="like(post.postId)" data-toggle="modal" data-target="#editLayoutItem"><i class="ik ik-thumbs-up"></i></a>
+          <a (click)="dislike(post.postId)" data-toggle="modal" data-target="#editLayoutItem"><i class="ik ik-thumbs-down"></i></a>
+          <a (click)="openModal(post)"><i class="ik ik-edit-2"></i></a>
+          <a  (click)="deletePostt(post.postId)" class="list-delete" ><i class="ik ik-trash-2"></i></a>
+      </div>
+      <div class="custom-control custom-checkbox pl-1 align-self-center">
+          <label class="custom-control custom-checkbox mb-0">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label"></span>
+          </label>
+      </div>
+  </div>
+</div>

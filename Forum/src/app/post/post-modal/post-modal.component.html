@@ -1,0 +1,33 @@
+
+<div  class="card" >
+  <div *ngIf="post;else other_content">
+    <div *ngIf="view == false;else other_head">
+    <div class="card-header"><h3>Update  Post</h3>
+      <div *ngIf="view == false;else other_content">
+        <app-edit [myInputObject]='post' ></app-edit>
+        </div>
+        <ng-template #other_content>
+          
+          <div class="card-header"><h3>View  Post</h3></div>
+          </ng-template>
+    </div>
+    </div>
+    </div>
+    <ng-template #other_head>
+      <div class="card-header"><h3>View  Post</h3></div>
+      </ng-template>
+
+  </div>
+
+  <ng-template #other_content>
+    <div class="card-header">
+      
+      <app-create></app-create>
+    </div>
+  </ng-template>
+
+
+ 
+  
+
+

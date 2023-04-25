@@ -1,0 +1,50 @@
+  <!--Content-->
+  <div class="modal-content">
+    <!--Header-->
+    <div class="modal-header">
+      <p class="heading">{{post.title}}</p>
+
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span (click)="CloseModal()" aria-hidden="true" class="white-text" style="color: #fff;">&times;</span>
+      </button>
+    </div>
+
+    <!--Body-->
+    <div class="modal-body">
+
+      <div class="row">
+        <div class="col-3">
+          <p></p>
+          <p class="text-center">
+            <i class="fas fa-gift fa-4x" style="color:#0B5ED7"></i>
+          </p>
+        </div>
+
+        <div class="col-9">
+          <p>{{post.content}}</p>
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                <strong>{{post.user.firstName}} {{post.user.lastName }}</strong>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                {{post.createdDate | date: 'EEEE  d  MMMM , y'}}
+              </p>
+            </div>
+           
+          </div>
+          <h2>
+            <span class="badge">v52gs1</span>
+          </h2>
+
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="modal-footer flex-center">
+      <a (click)="CloseModal()" class="btn " style="color : #fff;background-color: #0B5ED7; text-decoration: none;">Cancel </a>
+    </div>
+  </div>
